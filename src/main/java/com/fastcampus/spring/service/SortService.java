@@ -1,15 +1,17 @@
-package com.fastcampus.java.service;
+package com.fastcampus.spring.service;
 
-import com.fastcampus.java.logic.JavaSort;
-import com.fastcampus.java.logic.Sort;
+import com.fastcampus.spring.logic.Sort;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SortService {
 
     private Sort<String> sort;
 
-    public SortService(Sort<String> sort) {
+    public SortService(@Qualifier("bubbleSort") Sort<String> sort) {
         this.sort = sort;
         System.out.println("[구현체] : " + sort.getClass().getName());
     }

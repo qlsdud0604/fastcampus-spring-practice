@@ -1,4 +1,4 @@
-package com.fastcampus.java.logic;
+package com.fastcampus.spring.logic;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,15 +6,15 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BubbleSortTest {
+class JavaSortTest {
 
     @Test
-    public void bubbleSortTest() {
+    void javaSortTest() {
         // given
-        BubbleSort<Integer> bubbleSort = new BubbleSort<>();
+        JavaSort<Integer> javaSort = new JavaSort<>();
 
         // when
-        List<Integer> actual = bubbleSort.sort(List.of(1, 3, 4, 5, 2));
+        List<Integer> actual = javaSort.sort(List.of(1, 2, 4, 3, 5));
 
         // then
         assertEquals(List.of(1, 2, 3, 4, 5), actual);
